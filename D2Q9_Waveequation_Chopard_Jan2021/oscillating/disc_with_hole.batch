@@ -1,8 +1,8 @@
 INITIAL
-DO 150
+DO 10000
  VTK
  DO 1
-    OUTPUT_LOCAL Coordinate w 0 0.5
+    OUTPUT_LOCAL Coordinate w 0 0.0
     EQUILIBRIUM
     COLLISION
     STREAM

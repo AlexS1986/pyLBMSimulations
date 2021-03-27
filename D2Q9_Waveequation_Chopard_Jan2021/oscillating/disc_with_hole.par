@@ -1,9 +1,9 @@
 mue = 1.0
-rho = 0.001
+rho = 1.0
 tauh = 1.0
 D = 2.0
 b = 4.0
 L = 1.0
 wr = 1.0
-max_time = 2.0
+max_time = 4.0
 point_type = D2Q9_WaveEquation_Chopard
