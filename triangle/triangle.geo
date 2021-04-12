@@ -1,0 +1,14 @@
+#2D-Boundary
+
+POINTS
+0.0 4.0 0.0
+4.0 4.0 0.0
+2.0 0.0 0.0
+ENDPOINTS
+
+LINES
+2 1 2
+1 3 0
+3 2 1
+ENDLINES
+

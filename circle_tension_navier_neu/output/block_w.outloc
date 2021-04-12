@@ -1,0 +1,8 @@
+# This file contains local output data 
+# time (N x field_value) where N is the number of nodes for which output data of type field_value (field_name) was requested
+# Point IDs:
+# 6530
+# Fieldname: w
+# Point positions:
+#   5.00000000e-03   4.95000000e-01   0.00000000e+00 
+  0.00000000e+00   0.00000000e+00   0.00000000e+00 

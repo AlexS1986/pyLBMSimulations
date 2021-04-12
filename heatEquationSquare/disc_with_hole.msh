@@ -1,0 +1,3 @@
+# CellSize = 0.025 
+# n is number of missing lattice links at boundary lattice sites 
+# ID | x | y | z | ID x+ | ID y+ | ID x- | ID y- (| n x Bnd IDs | n x Bnd Distance | n x [x,y] Closest Point on Boundary | n x [x,y] Bnd Normal at Closest Point) 

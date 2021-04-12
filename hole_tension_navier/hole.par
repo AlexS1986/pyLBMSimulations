@@ -1,0 +1,11 @@
+mue = 1.0
+lambda = 1.0
+rho = 1.0
+D = 2.0
+b = 4.0
+L = 1.0
+wr = 1.0
+max_time = 2.0
+point_type = D2Q5_NavierEquation_Chopard
+beta_Newmark = 0.25
+gamma_Newmark = 0.5
