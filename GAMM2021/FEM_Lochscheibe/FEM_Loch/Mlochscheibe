@@ -1,0 +1,27 @@
+Parameters
+a=0.5
+b=0.5
+r=0.133 !RADIUS
+u=0.1*b
+l=16   ! Anzahl der Elemente auf Lochradius
+m=16   ! Anzahl der Elemente auf Breite
+n=1   ! Anzahl der Elemente auf Dicke
+tb = 1.0*0.005    ! traction normal to boundary
+nn = 2*l+1
+fn= tb*4.0*b/(2*nn-2)
+f1 = (m+1)*(l/2+1) ! Node numbers to apply forces to
+f2 = (m+1)*(l+1)
+f3 = f2 + (m+1) * (l/2+1)
+f4 = f2 + (m+1) * (l+1)
+f5 = f4 + (m+1) * (l/2+1)
+f6 = f4 + (m+1) * l
+f7 = f6 + (m+1) + (m+1) * (l/2+1)
+f8 = f6 + (m+1) + (m+1) * l
+nd = 1156
+ 
+MATErial       1
+ user  48   0   0   0   0
+    1.0,1.0,1.0,0
+    a/n*2.0,1e-5,100.0,10E200
+    0.1
+    1.0,0.0,0.0,0.0

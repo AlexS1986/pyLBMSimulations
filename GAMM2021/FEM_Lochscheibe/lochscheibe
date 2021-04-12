@@ -1,0 +1,16 @@
+SNODes
+1  0  0  -t/2
+2  r  0  -t/2
+3  b  0  -t/2
+4  b  a  -t/2
+5  0  a  -t/2
+6  0  r  -t/2
+
+
+SIDEs
+ POLA 2 6 1
+ SEGM 3 l/2 4 l/2 5
+
+BLEND
+ SURFACE l m 
+ 2 3 5 6 

@@ -1,0 +1,136 @@
+feap *** Plastische Lochscheibe ***
+,,1,2,3,4 
+
+CONStants
+a=1.0
+n = 16
+tb = 0.0005    ! traction normal to boundary
+fn= tb*a/(2 * n)
+f1 = n*(n+1) +1 ! Node numbers to apply forces to
+f2 = (n+1)*(n+1)
+f3 = 1
+f4 = n+1
+
+
+
+!MATErial,1
+!  SOLId
+!   PLANe STRAin
+!   ELAStic ISOTropic 1.25 0.25
+!   DENSITY 1.0
+
+
+mate,1
+user,48
+1.0, 1.0 ,1.0,0
+a/n*2.0, 1e-5, 100.0, 10E200
+0.1
+1.0,0.0,0.0,0.0
+
+!MATErial,1
+!USEr,48
+!0.5, 0.5 ,1.0,0
+!a/n*2.0, 1e-5, 100E200.0, 10E200
+!0.1
+!1.0,0.0,0.0,0.0
+!10000.0 0.3 100.0 !1000.0 E,POISSON RATIO, RHO
+
+NOPRint
+
+bloc,1
+cart,n,n,1,1,1
+1  -a/2  -a/2
+2  +a/2  -a/2
+3  +a/2   a/2
+4  -a/2   a/2
+
+
+!FORCE
+!f1, 0, fn, 0  !corners
+!f2, 0, fn, 0
+!f3, 0, -fn, 0
+!f4, 0, -fn, 0
+!f1+1,1,2.0*fn,0
+!f2-1,0,2.0*fn,0
+!f3+1,1,-2.0*fn,0
+!f4-1,0,-2.0*fn,0
+
+
+FORCE
+f1, 0, fn, 0  !corners
+f2, 0, fn, 0
+f1+1,1,2.0*fn,0
+f2-1,0,2.0*fn,0
+
+
+ebou
+2,-a/2,1,1,0
+
+
+END
+
+TIE
+
+PRINt
+
+OPTI
+
+macr
+init,disp
+end 
+1, 1, 0, 0, 1.0
+f2,0,0,0,1.0
+
+macr ! COntrols load over time -> see FEAP Documentation
+prop
+end
+2,3
+0.0 0.0 1.0 1.0  1000.0 1000.0
+!1,0.0,0.0,1.e99,0.0,1.0,0.0,0.0,0.0
+
+
+
+batch
+ tplo
+end
+DISP,,1,0.025,+0.5
+DISP,,2,0.025,+0.5
+!DISP,NODE,f2-n/2,
+!DISP,NODE,f2-n/2,1
+!DISP,NODE,f2-n/2,3
+!sums,2,2,b
+
+!BATCh
+!tplo
+!END
+!disp,,1,b,0.0,+t/2
+!sums,1,1,-b
+!show
+
+!inte
+
+BATCh
+!dt,,0.01
+dt,,0.00020412414523192032
+tran,newm
+loop,last,100000
+ loop,ohne,9
+  loop,equi,20
+   tang,,1
+  next,equi
+ !plot,wipe
+  plot,hide
+ !plot,range,0,200.0
+  plot,defo
+  plot,cont,3
+  !plot,stre,2
+  time,,2.0
+ next,ohne
+ stre,node,1,numnp
+ vtk,time
+next,last
+END
+
+INTEractive 
+
+STOP

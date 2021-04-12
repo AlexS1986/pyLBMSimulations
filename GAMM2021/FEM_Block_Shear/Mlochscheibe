@@ -1,0 +1,16 @@
+Parameters
+a=1.0
+n = 16
+tb = 0.0005    ! traction normal to boundary
+fn= tb*a/(2 * n)
+f1 = n*(n+1) +1 ! Node numbers to apply forces to
+f2 = (n+1)*(n+1)
+f3 = 1
+f4 = n+1
+ 
+MATErial       1
+ user  48   0   0   0   0
+    1.0,1.0,1.0,0
+    a/n*2.0,1e-5,100.0,10E200
+    0.1
+    1.0,0.0,0.0,0.0
