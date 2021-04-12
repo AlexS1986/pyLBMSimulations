@@ -1,0 +1,10 @@
+mue = 1.0
+rho = 1.0
+tauh = 1.0
+D = 2.0
+b = 4.0
+L = 1.0
+wr = 1.0
+max_time = 6.0
+point_type = D2Q5_WaveEquation_Guangwu
+aux_point_switch = True
