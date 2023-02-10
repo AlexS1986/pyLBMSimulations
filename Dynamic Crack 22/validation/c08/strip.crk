@@ -1,0 +1,11 @@
+Dynamic Crack
+  :: general
+    criterion = steady
+    crit_val = 0.015
+    velocity = 0.8
+    d_min = 0.355
+  :: crack
+    crack = 1
+    direction = (1, 0, 0)
+<End
+

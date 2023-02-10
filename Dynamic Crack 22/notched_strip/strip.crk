@@ -1,0 +1,14 @@
+Dynamic Crack
+  :: general
+    criterion = SIF
+    crit_val = 0.042
+    velocity = 0.9
+    # max_time = 0.0
+    d_min = 0.07
+  :: flags
+    adaptive_d = True
+  :: crack1
+    crack = 1
+    direction = (1, 0, 0)
+<End
+
