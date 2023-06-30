@@ -1,0 +1,16 @@
+[Flags]
+  configurational = true
+
+# any definitions for simulation of dynamic cracks
+[DynCrack]
+  criterion = "MERR"
+  crit_val = 7.5e-4
+  velocity = 0.6
+  domain_size = [0.25, 0.25]
+
+  # list of cracks to include in propagation
+  [[DynCrack.Cracksets]]
+  tag = 0                 # must match ID in Geometry.Cracks, determines BCs
+  invert = false          # invert crack direction?
+  direction = [1, 0, 0]
+

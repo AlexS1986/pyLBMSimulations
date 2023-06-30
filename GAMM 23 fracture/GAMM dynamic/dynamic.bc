@@ -1,0 +1,8 @@
+# This is a file that specifies boundary conditions for lbm
+# ID | Value | Dirichlet/Neumann | Prop. Parameters 1-7 ( type k t_min t_max a_1 a_2 a_3 a_4  a_5 (BCTypeSwitch)
+# example type=1: value=a_1 + a_2(t -t_min) + a_3 [sin(2*pi/a_4(t-t_min)+a_5]^k for t<t_max else value=0.0
+#
+#                                    type  k t_min t_max a_1 a_2 a_3 a_4 a_5
+0  0.0  0.05  Neumann_firstorder        1  1     0     1   0   0   1   1   0
+1  0.0 -0.05  Neumann_firstorder        1  1     0     1   0   0   1   1   0
+2  0.0  0.0   Neumann_firstorder        1  0     0    99   0   0   0   1   0

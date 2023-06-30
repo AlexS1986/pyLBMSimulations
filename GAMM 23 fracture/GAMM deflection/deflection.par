@@ -1,0 +1,10 @@
+mue = 1.0
+lambda = 1.0
+rho0 = 1.0
+L = 1.0
+wr = 1.0
+max_time = 2.125
+point_type = D2Q9_NavierEquation_Ansumali
+aux_point_switch = False
+dynamic_crack = True
+precise_key = False

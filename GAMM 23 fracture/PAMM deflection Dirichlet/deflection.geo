@@ -1,0 +1,22 @@
+#2D-Boundary
+
+POINTS
+-1.0  -1.0  0.0
++1.0  -1.0  0.0
++1.0  +1.0  0.0
+-1.0  +1.0  0.0
+-1.0   0.0  0.0
+ 0.0   0.0  0.0
+ENDPOINTS
+
+LINES
+1 2 2
+2 3 0
+3 4 3
+4 5 1
+5 1 0
+ENDLINES
+
+CRACKS
+5 6 0 0
+ENDCRACKS
